@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "p-s-auth": {
+      "hosting": {
+        "app": [
+          "p-s-auth"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "p-s-auth"
+  }
+}

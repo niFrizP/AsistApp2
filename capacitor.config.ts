@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.nyc.devs.app',
   appName: 'AsistApp2',
   webDir: 'www',
   bundledWebRuntime: false
