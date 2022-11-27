@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Crear Notificaciones</h1>
+
+  <form id="form">
+    <ion-item>
+      <ion-label position="floating">asignatura </ion-label>
+      <ion-input [(ngModel)]="data.profesor.asignatura"[ngModelOptions]="{standalone: true}" required clearInput></ion-input>
+      <ion-label position="floating">seccion</ion-label>
+      <ion-input [(ngModel)]="data.profesor.seccion" [ngModelOptions]="{standalone: true}"required clearInput></ion-input>
+      <ion-label position="floating">notificacion</ion-label>
+      <ion-input [(ngModel)]="data.profesor.notif"[ngModelOptions]="{standalone: true}" required clearInput></ion-input>
+      <ion-label position="floating">profesor</ion-label>
+      <ion-input [(ngModel)]="data.profesor.profesor"[ngModelOptions]="{standalone: true}" required clearInput></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="primary" type="submit"  (click)="nuevaNoti()" class="ion-margin-top">
+      enviar
+    </ion-button>
+  </form>
+</ion-content>

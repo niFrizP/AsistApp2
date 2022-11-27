@@ -1,0 +1,11 @@
+<div *ngIf="asistencia" class="content-resultado" >
+  <ion-card>
+    <h4 class="nombre">{{asistencia.nombre}}</h4>
+    <h4 class="correo">{{asistencia.correo}}</h4>
+  </ion-card>
+  
+
+</div>
+
+<ion-button>ver</ion-button>
+<ion-button (click)="asis()">añadir a favoritos</ion-button>

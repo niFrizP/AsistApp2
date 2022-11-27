@@ -1,9 +1,9 @@
 export interface User{
-    uid: string
+    uid: string;
     nombre : string;
     correo: string;
     password: string;
-    perfil: 'estudiante' | 'profesor'
+    perfil: 'estudiante' | 'profesor';
 }
 export interface asis{
     uid: string;
@@ -11,3 +11,13 @@ export interface asis{
     fecha: any;
     asistencia: boolean;
 }
+
+export interface notificacion {
+    profesor:{
+    asignatura: string;
+    seccion: number;
+    notif: string;
+    profesor: string;
+    id: string;
+    } | null;
+} 
