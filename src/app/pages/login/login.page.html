@@ -1,22 +1,21 @@
-
-<ion-content>
-  <div id="header">
-    <h1>INICIO DE SESION</h1>
-  </div>
+<ion-content class="ion-padding">
+  <h1>Bienvenido/a,</h1>
+  <h3>Inicia sesión para continuar!</h3>
 
     <form id="foring">
     <ion-item id="forming">
         <ion-label position="floating">Correo de Usuario</ion-label>
-        <ion-input  required [(ngModel)]="credenciales.email"[ngModelOptions]="{standalone: true}"></ion-input>
+        <ion-input type="email" name="email" required [(ngModel)]="credenciales.email"[ngModelOptions]="{standalone: true}" clearInput></ion-input>
     </ion-item>
     <ion-item id="forming">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input [(ngModel)]="credenciales.password"[ngModelOptions]="{standalone: true}" type="password"></ion-input>
+      <ion-input type="password" name="password" [(ngModel)]="credenciales.password"[ngModelOptions]="{standalone: true}" clearInput></ion-input>
   </ion-item>
   </form>
+
   <form>
-    <ion-button  color="tertiary" shape="round" (click)="login()">Ingresar</ion-button>
-    <ion-button  color="tertiary" shape="round" [routerLink]="['/registro']">Registrar</ion-button>
+    <ion-button color="primary" shape="round" (click)="login()">Ingresar</ion-button>
+    <ion-button color="tertiary" shape="round" type="submit" [routerLink]="['/registro']">Crear una cuenta</ion-button>
     <ion-button expand="block" color="tertiary" shape="round" [routerLink]="['/sign']">Olvide mi Contraseña</ion-button>
   </form>
 </ion-content>
