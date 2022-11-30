@@ -43,7 +43,7 @@ export class RegistroPage implements OnInit {
       this.datos.password = '';
       await this.firestore.createDoc(this.datos, path, id)
       this.interaction.closeLoading();
-      this.interaction.presentToast('Registro exitoso 2')
+      this.interaction.presentToast('Registro exitoso')
       this.Router.navigate(['/login'])
     
     }

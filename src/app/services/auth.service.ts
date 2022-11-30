@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import * as firebase from 'firebase/compat';
 import { User } from '../models/models';
-
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { User } from '../models/models';
 export class AuthService {
 
   constructor(private authfirebase: AngularFireAuth, public ngFireAuth: AngularFireAuth) { }
-
+ 
   login(correo :string, password:string){
     return this.authfirebase.signInWithEmailAndPassword(correo, password)
   }

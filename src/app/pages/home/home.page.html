@@ -1,33 +1,32 @@
 <ion-content>
-  <div id="header">
-    <div id="app-bar">
-    </div>
-
-    <ion-buttons slot="start" class="menu_btn">
-      <ion-menu-button color="light"></ion-menu-button>
-    </ion-buttons>
-
-    <div class="user_div">
-      <div class="first_div">
-        <ion-label class="welcome">Bienvenid@</ion-label>
-        <ion-label class="username">Usuari@</ion-label>
+  <div id="main_content_div">
+      <div id="app-bar">
+        <ion-buttons slot="start" class="ion-padding" size="large">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
       </div>
-      <div class="user_back" [style.backgroundImage]="'url(assets/01.jpg)'"></div>
-    </div>
 
-    <div class="content_div animated bounceInUp">
-      <ion-label class="hola_asignatura">Hola, elija su asignatura</ion-label>
+      <div class="user_div">
+        <div class="first_div">
+          <ion-label class="welcome">Bienvenid@</ion-label>
+          <ion-label class="username">Usuari@</ion-label>
+        </div>
+        <div class="user_back" [style.backgroundImage]="'url(assets/01.jpg)'"></div>
+      </div>
 
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects ">
-            <div class="col_div">
-              <img src="{{item.img}}" >
-              <ion-label>{{item.name}}</ion-label>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
+      <div class="content_div animated bounceInUp">
+        <ion-label class="hola_asignatura">Hola, elija su asignatura</ion-label>
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects ">
+              <div class="col_div">
+                <img src="{{item.img}}" >
+                <ion-label>{{item.name}}</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
   </div>
 </ion-content>

@@ -21,6 +21,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {}
 
+  googleLogin() {}
+
   async login() {
     await this.interaction.showLoading('Iniciando sesión...')
     console.log(this.credenciales);
