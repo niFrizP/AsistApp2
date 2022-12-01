@@ -37,7 +37,7 @@ export class AppComponent {
   logout(){
     this.auth.logout();
     this.interaction.presentToast('Sesión cerrada');
-    this.Router.navigate(['/home'])
+    this.Router.navigate(['/login'])
   }
   getDatosUser(uid: string){
     const path = 'usuarios';

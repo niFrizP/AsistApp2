@@ -5,26 +5,27 @@
           <ion-menu-button color="light"></ion-menu-button>
         </ion-buttons>
       </div>
-
+      <div id="logo"><img src="assets/logo.png"></div>
       <div class="user_div">
         <div class="first_div">
-          <ion-label class="welcome">Bienvenid@</ion-label>
-          <ion-label class="username">Usuari@</ion-label>
         </div>
+
         <div class="user_back" [style.backgroundImage]="'url(assets/01.jpg)'"></div>
       </div>
 
       <div class="content_div animated bounceInUp">
-        <ion-label class="hola_asignatura">Hola, elija su asignatura</ion-label>
 
         <ion-grid fixed>
           <ion-row>
-            <ion-col size="6" (click)="goToSubject()" *ngFor="let item of subjects ">
-              <div class="col_div">
-                <img src="{{item.img}}" >
-                <ion-label>{{item.name}}</ion-label>
-              </div>
-            </ion-col>
+            <ion-item routerLink='/perfil'>
+            <ion-card>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+              <ion-card-header>
+                <ion-card-title>Card Title</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-item>
+
           </ion-row>
         </ion-grid>
       </div>

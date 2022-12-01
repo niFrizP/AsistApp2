@@ -1,6 +1,15 @@
 <ion-content class="ion-padding">
-  <h1>Bienvenido/a,</h1>
-  <h3>Inicia sesión para continuar!</h3>
+  <ion-grid fixed>
+    <ion-row>
+      <div>
+        <h2>Bienvenido/a,</h2>
+        <h3>Inicia sesión para continuar!</h3>
+        <div id="logo"><img src="assets/logo.png"></div>
+      </div>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <br>
 
     <form id="foring">
     <ion-item id="forming">
@@ -12,11 +21,12 @@
       <ion-input type="password" name="password" [(ngModel)]="credenciales.password"[ngModelOptions]="{standalone: true}" clearInput></ion-input>
   </ion-item>
   </form>
-
-  <form>
-    <ion-button color="primary" shape="round" (click)="login()">Ingresar</ion-button>
-    <ion-button color="tertiary" shape="round" type="submit" [routerLink]="['/registro']">Crear una cuenta</ion-button>
-    <ion-button expand="block" color="tertiary" shape="round" [routerLink]="['/passrecover']">Olvide mi Contraseña</ion-button>
-  </form>
+  <ion-grid fixed>
+    <form>
+      <ion-button fill="clear" [routerLink]="['/passrecover']">Olvidé mi Contraseña</ion-button>
+      <ion-button color="primary" shape="round" (click)="login()">Ingresar</ion-button>
+      <ion-button color="tertiary" shape="default" type="submit" [routerLink]="['/registro']">Crear una cuenta</ion-button>
+    </form>
+  </ion-grid>
 </ion-content>
 
