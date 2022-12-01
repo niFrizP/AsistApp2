@@ -37,6 +37,10 @@ const routes: Routes = [
     path: 'qr',
     loadChildren: () => import('./pages/qr/qr.module').then( m => m.QRPageModule)
   },
+  {
+    path: 'passrecover',
+    loadChildren: () => import('./pages/passrecover/passrecover.module').then( m => m.PassrecoverPageModule)
+  },
 ];
 
 @NgModule({

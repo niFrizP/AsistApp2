@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <br>
+      <br>
+      <ion-button routerLink="/login">Ir a Iniciar Sesion</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Recupera tu<br />Contraseña</h1>
+  <form id="form">  
+    <form #frm="ngForm"  >
+      <ion-item class="animate__animated animate__backInLeft">
+        <ion-label position="floating">Correo Electronico</ion-label>
+        <ion-input type="text" #email required  clearInput></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="tertiary" (click)="AuthService.PasswordRecover(email.value)"type="submit"  class="ion-margin-top">
+        Recuperar
+      </ion-button>
+
+    </form>
+  </form>
+
+</ion-content>
