@@ -21,3 +21,9 @@ export interface notificacion {
     id: string;
     } | null;
 } 
+export interface clase {
+    fechas: any;
+    asignatura: string;
+    fecha: any[];
+    asistencia: number;
+}

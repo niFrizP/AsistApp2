@@ -1,9 +1,9 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AjustesComponent } from './backend/ajustes/ajustes.component';
@@ -15,8 +15,9 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, AjustesComponent],
-  imports: [BrowserModule, CommonModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig), FormsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, HttpClientModule, CommonModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig), FormsModule],
+  providers: [
+    BarcodeScanner,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -15,7 +15,10 @@ export class FirestoreService {
   createEstudiante(){
     this.firestore.collection('estudiantes')
   }
-
+  updateDoc(data: any, path: string, id: string){
+    const collection = this.firestore.collection(path);
+    return collection.doc(id).update(data);
+  }
   getId(){
     return this.firestore.createId();
   }

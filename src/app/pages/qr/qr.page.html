@@ -7,12 +7,9 @@
 
 <ion-content [style.visibility]="content_visibility">
 
-  <ion-button 
-    expand="block" 
-    class="ion-margin" 
-    (click)="startScan()"> Escanear QR </ion-button>
+  <ion-button expand="block" class="ion-margin" (click)="startScan()"> Escanear QR </ion-button>
 
   <ion-item *ngIf="scannedResult">
-    <ion-label class="ion-text-wrap">Resultado Escaneado {{scannedResult}}</ion-label>
+    <ion-label class="ion-text-wrap">Resultado Escaneado</ion-label>
   </ion-item>
 </ion-content>

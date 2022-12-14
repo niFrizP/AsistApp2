@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>asignaturas</ion-title>
+    <ion-title>Asignaturas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let x of clases">
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{x.asignatura}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Asistencia:</ion-label>
+          <ion-label>{{x.asistencia}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Ultimo registro:</ion-label>
+          <ion-label>{{x.fecha}}</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-button class="ion-padding" size="block" (click)="getDetalle(x.asignatura)">
+      Detalles
+    </ion-button>
+    <br>
+  </ion-list>
 </ion-content>

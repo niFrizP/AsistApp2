@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let x of fechas">
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-label>{{x.fecha}}</ion-label>
+    </ion-item>
+    <br>
+  </ion-list>
+  <br>
+  <h2 class="ion-padding">Total asistencia: {{asistencia}}</h2>
+  <br>
+</ion-content>
