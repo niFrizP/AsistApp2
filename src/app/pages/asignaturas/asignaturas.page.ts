@@ -3,6 +3,7 @@ import { clase } from 'src/app/models/models';
 import { AuthService } from '../../services/auth.service';
 import { FirestoreService } from '../../services/firestore.service';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-asignaturas',
@@ -14,6 +15,7 @@ export class AsignaturasPage implements OnInit {
 
   constructor(
     private authService: AuthService,
+    private menu:MenuController,
     private db: FirestoreService,
     private router: Router
   ) { }
@@ -21,6 +23,11 @@ export class AsignaturasPage implements OnInit {
   async ngOnInit() {
     this.getClases();
   }
+
+  verMenu(){
+    this.menu.open('first');
+  }
+
   //get all clases
   getClases(){
     this.db.getCollection<clase>('Clases').subscribe(res => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 import { clase } from 'src/app/models/models';
 import { FirestoreService } from '../../services/firestore.service';
 
@@ -13,6 +14,7 @@ export class DetallePage implements OnInit {
   asistencia: number;
   constructor(
     private router:Router,
+    private menu:MenuController,
     private db: FirestoreService
   ) { 
     
@@ -21,6 +23,11 @@ export class DetallePage implements OnInit {
   async ngOnInit() {
     this.getDetail();
   }
+
+  verMenu(){
+    this.menu.open('first');
+  }
+
   async getDetail(){
     let asignatura = history.state.asignatura;
     this.db.getCollection<clase>('Clases').subscribe(res => {

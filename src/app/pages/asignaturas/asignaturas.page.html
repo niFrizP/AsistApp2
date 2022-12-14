@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Asignaturas</ion-title>
+      <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-title>Asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,7 +24,8 @@
       </ion-card-content>
     </ion-card>
     <ion-button class="ion-padding" size="block" (click)="getDetalle(x.asignatura)">
-      Detalles
+    <ion-icon name="information-circle-outline"></ion-icon>
+      Mas info
     </ion-button>
     <br>
   </ion-list>
