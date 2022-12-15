@@ -35,7 +35,7 @@ export class DetallePage implements OnInit {
         if(element.asignatura === asignatura){
           this.asistencia = element.asistencia;
           element.fechas.forEach((fecha:any) => {
-            let x = fecha.toDate() + '' + fecha.toDate().getHours() + ':' + fecha.toDate().getMinutes();
+            let x = fecha.toDate() + '' + fecha.toDate().getHours() + ':' + fecha.toDate().toLocalstringDate();
             this.fechas.push({
               fecha: x,
             });
